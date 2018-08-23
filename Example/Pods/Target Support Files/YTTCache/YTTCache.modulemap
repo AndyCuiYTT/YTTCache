@@ -1,0 +1,6 @@
+framework module YTTCache {
+  umbrella header "YTTCache-umbrella.h"
+
+  export *
+  module * { export * }
+}
