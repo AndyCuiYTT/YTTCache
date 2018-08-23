@@ -11,7 +11,7 @@ import SQLite
 
 class YTTDataBase {
     
-    let cacheQueue = DispatchQueue(label: "com.andycui.ytt.cache")
+    private let cacheQueue = DispatchQueue(label: "com.andycui.ytt.cache")
     private let cacheTb = Table("cacheTb")
     private let id = Expression<Int64>("id")
     private let cache_data = Expression<Blob>("cache_data")
