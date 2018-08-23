@@ -111,6 +111,4 @@ class YTTDataBase {
         }
         return result
     }
-
-
 }
