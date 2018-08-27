@@ -1,8 +1,8 @@
 # YTTCache
 
-[![Version](https://img.shields.io/cocoapods/v/YTTCache.svg?style=flat)](https://cocoapods.org/pods/YTTCache)
-[![License](https://img.shields.io/cocoapods/l/YTTCache.svg?style=flat)](https://cocoapods.org/pods/YTTCache)
-[![Platform](https://img.shields.io/cocoapods/p/YTTCache.svg?style=flat)](https://cocoapods.org/pods/YTTCache)
+[![Version](https://img.shields.io/cocoapods/v/YTTCache.svg)](https://cocoapods.org/pods/YTTCache)
+[![License](https://img.shields.io/cocoapods/l/YTTCache.svg)](https://cocoapods.org/pods/YTTCache)
+[![Platform](https://img.shields.io/cocoapods/p/YTTCache.svg)](https://cocoapods.org/pods/YTTCache)
 
 ## Example
 
