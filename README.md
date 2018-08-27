@@ -8,7 +8,9 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+## Usage
+
+[YTTCache | AndyCuiの博客](http://andycui.top/2018/08/27/YTTCache/)
 
 ## Installation
 
