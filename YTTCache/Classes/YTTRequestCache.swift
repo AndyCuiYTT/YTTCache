@@ -1,8 +1,8 @@
 //
 //  YTTRequestCache.swift
-//  FBSnapshotTestCase
+//  YTTCache
 //
-//  Created by qiuweniOS on 2018/8/27.
+//  Created by AndyCui on 2018/8/27.
 //
 
 import UIKit

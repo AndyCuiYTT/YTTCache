@@ -1,9 +1,9 @@
 //
 //  YTTDataBase.swift
-//  YTTCache_Example
+//  YTTCache
 //
-//  Created by qiuweniOS on 2018/8/23.
-//  Copyright © 2018年 CocoaPods. All rights reserved.
+//  Created by AndyCui on 2018/8/23.
+//  Copyright © 2018年 AndyCuiYTT. All rights reserved.
 //
 
 import UIKit

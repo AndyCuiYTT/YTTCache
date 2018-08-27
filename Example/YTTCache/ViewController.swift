@@ -17,7 +17,10 @@ class ViewController: UIViewController {
         YTTCache.storeString("qqqqqqqq", key: "1234")
         YTTCache.updateStoreString("吃饭GV哈哈,办好几回,吧", key: "1234")
         print(YTTCache.stringForKey("1234"))
+        YTTCache.removeCacheForKey("key")
+        YTTCache.cleanCache()
         
+        YTTRequestCache.removeJSONStringForKey(url: <#T##String#>, param: <#T##[String : Any]#>)
         
     }
 
