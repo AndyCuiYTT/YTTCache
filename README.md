@@ -1,6 +1,5 @@
 # YTTCache
 
-[![CI Status](https://img.shields.io/travis/AndyCuiYTT/YTTCache.svg?style=plastic)](https://travis-ci.org/AndyCuiYTT/YTTCache)
 [![Version](https://img.shields.io/cocoapods/v/YTTCache.svg?style=flat)](https://cocoapods.org/pods/YTTCache)
 [![License](https://img.shields.io/cocoapods/l/YTTCache.svg?style=flat)](https://cocoapods.org/pods/YTTCache)
 [![Platform](https://img.shields.io/cocoapods/p/YTTCache.svg?style=flat)](https://cocoapods.org/pods/YTTCache)
