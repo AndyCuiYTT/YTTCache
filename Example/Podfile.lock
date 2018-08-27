@@ -7,7 +7,7 @@ PODS:
   - SQLite.swift (0.11.5):
     - SQLite.swift/standard (= 0.11.5)
   - SQLite.swift/standard (0.11.5)
-  - YTTCache (0.1.0):
+  - YTTCache (0.1.1):
     - SQLite.swift (~> 0.11.5)
 
 DEPENDENCIES:
@@ -27,7 +27,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
-  YTTCache: eaedb357ef94ce7ff13c335f94098c3aac01cec7
+  YTTCache: 993dce3ef57c7b03683a14fc235ac06683f52d79
 
 PODFILE CHECKSUM: ed9ba1d3e009e29f5ec904a31e7439e3647e9b0e
 

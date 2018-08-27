@@ -11,12 +11,12 @@
 		094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDF0D928C6E85C2752880F3C558C580 /* UIApplication+StrictKeyWindow.m */; };
 		0A1BECC6ACEC18B5B012C4E213C6A1C7 /* RTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9938E13D4202C33B63E4A0B9391279 /* RTree.swift */; };
 		0C3124715E66DC85EFF07C863FD930FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38AF009D63CD493981606F66EFA97B4 /* Foundation.framework */; };
+		0E9DDDD320C28C58187288F89FF05A43 /* YTTRequestCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9677EFF1239FD40124F8857B330D2558 /* YTTRequestCache.swift */; };
 		0FD4B0A52CFABCBA9A8DC5AAD2A7C377 /* SQLite.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF124B0C571136499A1C1D95A87832C /* SQLite.swift-dummy.m */; };
 		1167BFC2EBEB94C7CD60956EF4EE056A /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE54032A9DFEC58244DF8D72D2C5ECE /* Collation.swift */; };
 		155A9736D8C7CFF7236701F4DFF8E528 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 21068BCAA8B62A3C107B84F144813BFE /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18EA4E0D8B74F2B2BBF8F39B49F49BF9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FD462532BECCFE73E457133A62504B /* XCTest.framework */; };
 		1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD61C3515F9A9F5C6B35A8C8862E1DC /* SwiftSupport.swift */; };
-		1AEF8E9C1E4B3929C627D87BD9F63F4F /* YTTCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B390DED0CBA0ACA39492C9EAFA51E20 /* YTTCache.swift */; };
 		2EBFB8D8BE4FBE3FFB56ACBB6F6A051D /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC79C5FD4E2F232ACD395E90E3737E95 /* Schema.swift */; };
 		2F485B69F51E4F723A38410F31F08550 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 66889BD27A6EF6E2A5E132DE652650F5 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		319B3626DAC0EE041C7E4C6CEC77DC19 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7155E110B5158F311AFC0928ADAA0727 /* Statement.swift */; };
@@ -26,9 +26,10 @@
 		3EA6DA0ED7665E5F62E0A4445ECCE336 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D65B129C4EACDBA36D7244C7D26BB9E /* Blob.swift */; };
 		421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 02C15B86C8938E2394D6B71CDD39EF47 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		47DEE95708BDBD11436162D166CD192E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D60C3C867A27C02D9CB077654FB9D8 /* UIKit.framework */; };
-		484C360F5DDB77C5FB85025730486FC6 /* YTTCache-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 100E0EB26AE3D9734D7C404D3EE78167 /* YTTCache-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484C360F5DDB77C5FB85025730486FC6 /* YTTCache-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CA14DA3BF33119D4D83C623377B3DEB9 /* YTTCache-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		484E4FBD0114340FE750E1A0F6B63ADD /* SQLite-Bridging.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D1F52DB03C471BF99192E3AA18388A /* SQLite-Bridging.m */; };
 		506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A5A53BEDF3EB036AE2C76BE095EE39 /* FBSnapshotTestCase-dummy.m */; };
+		588859D981CC9B46782486B4544CB61F /* YTTCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749116EBB8CF6E5C017AEF9A317E4D9F /* YTTCache.swift */; };
 		5BC12F69E33ABA27B9E0B78128CE336D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF8AF0071168A7551C405F9414E98D0 /* QuartzCore.framework */; };
 		5C1B92C505CB483D44FABE2E780CA0DB /* Pods-YTTCache_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1804DCCAC9D42CF109846C779BA11A /* Pods-YTTCache_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		623FE8DC2EB2174B29C16BFDF70768DD /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE97DA1F7060286FC68F5A9122709B9 /* Setter.swift */; };
@@ -47,7 +48,6 @@
 		9ABA57593871D0E096827ABDB3F5FA9E /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2147255A16693684648F1DA86C73A4CB /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE07E6FB5D655CA39902B15081D9D62 /* FBSnapshotTestController.m */; };
 		B0DCB60D490FFCB891EA17CDB856F476 /* DateAndTimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716525A05FCE7F342BB7F3F5C72145 /* DateAndTimeFunctions.swift */; };
-		B6C0FB8A5EEAB7DFAC20F3BBEAEC6DD6 /* YTTCache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 478DB23AA921C0275CC329428BF482B6 /* YTTCache-dummy.m */; };
 		B758FB09FE2C06C1B8E36A71A9D76D41 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B91FA24C2B897FC947443B971EFC762 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC952FC04FC963C1294DCD619C9B6B3B /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D08F1690BBED219967446575B2335B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BCA60B0B1ABFFFBC78233E34E1D45ED1 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297C82B88345E072580409A5AB6478 /* Query.swift */; };
@@ -59,7 +59,7 @@
 		D7123FABE364F2EA8DCB52D00CC33D3A /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9905738F744681CB2CADD81616836 /* CoreFunctions.swift */; };
 		DAD9A0E0F40D3984B78A22F8D3CDAB45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38AF009D63CD493981606F66EFA97B4 /* Foundation.framework */; };
 		DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = A2906C8D61967D8F0A4A875718B1FEF2 /* FBSnapshotTestCasePlatform.m */; };
-		E51A377C8D94D4FD04D22FCC93EE16DC /* YTTDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9EDED4FC7532A6719583AEEF683DF /* YTTDataBase.swift */; };
+		E615D96801E43DBE410E21F15E24E179 /* YTTCache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D476DBA02B86823FDC750B0739E13E5 /* YTTCache-dummy.m */; };
 		EDFF9F4407A1938134B2CAAF5E6F78FC /* SQLite-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = CB37B06501D1063BBF68DC4426F5A37A /* SQLite-Bridging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F03628A624F8822BCA57A504A5B6E7A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38AF009D63CD493981606F66EFA97B4 /* Foundation.framework */; };
 		F16FDA2855C9880C8932E529AE1A3D20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38AF009D63CD493981606F66EFA97B4 /* Foundation.framework */; };
@@ -67,6 +67,7 @@
 		F8683410AA945F24CB8509F275AB8F12 /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7380CE1671540276312426BFA24465 /* AggregateFunctions.swift */; };
 		F9C75186C00E5D64B69748E89FF66529 /* Pods-YTTCache_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23406B5C7CC6FDDED68FA6A5A09DA84A /* Pods-YTTCache_Tests-dummy.m */; };
 		FAF73F4B0C7F9A1800720E6BF98C8E08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38AF009D63CD493981606F66EFA97B4 /* Foundation.framework */; };
+		FB398C4077F9E44475CBD5DE392C105E /* YTTDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC6C666A92BAABA4AA03862394AA4AF /* YTTDataBase.swift */; };
 		FF304D788E077BC66DD279351A4C03BA /* Pods-YTTCache_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 310E633F6A6FBD5878EFBC4B0CF5261C /* Pods-YTTCache_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -110,24 +111,22 @@
 
 /* Begin PBXFileReference section */
 		02C15B86C8938E2394D6B71CDD39EF47 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
-		043740151009868EF256B20C245C769D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		073CC29E92A2B0C29A74F9E288D9BCF7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		082BC9406F8E4DB8F46BE1764FD3EF9A /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/SQLite/Typed/Operators.swift; sourceTree = "<group>"; };
 		09297C82B88345E072580409A5AB6478 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = Sources/SQLite/Typed/Query.swift; sourceTree = "<group>"; };
 		09CB258E6B270D200412B9F0A6818912 /* SQLite.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-prefix.pch"; sourceTree = "<group>"; };
+		0CF0146FF18535DE73A7B0A2DD115A9B /* YTTCache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YTTCache.xcconfig; sourceTree = "<group>"; };
 		0FE54032A9DFEC58244DF8D72D2C5ECE /* Collation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Collation.swift; path = Sources/SQLite/Typed/Collation.swift; sourceTree = "<group>"; };
-		100E0EB26AE3D9734D7C404D3EE78167 /* YTTCache-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YTTCache-umbrella.h"; sourceTree = "<group>"; };
 		10740799E563250F347AB6AE68941028 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		10C3F09A40FC16D9ADFACD17DDFC2DCA /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Sources/SQLite/Core/Connection.swift; sourceTree = "<group>"; };
 		16BAAA2B4C63BD0A6688D922FE63CA76 /* Pods-YTTCache_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YTTCache_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1739B0B9752F3BFD8CF6448FABF127C5 /* Pods-YTTCache_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YTTCache_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		17664CE77C754D24F2FE4F726F126F93 /* Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Foundation.swift; path = Sources/SQLite/Foundation.swift; sourceTree = "<group>"; };
-		18663FB19D75CCBAA821507FE46008D8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		1A339B15795A1DF02A764142D83D36B7 /* Value.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Sources/SQLite/Core/Value.swift; sourceTree = "<group>"; };
 		1CD816C869DE5DF789A5A6DFD22C1AA1 /* Pods-YTTCache_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YTTCache_Example-resources.sh"; sourceTree = "<group>"; };
 		1F63F7B0313A58B614D39C4549F4F44B /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		21068BCAA8B62A3C107B84F144813BFE /* SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = Sources/SQLite/SQLite.h; sourceTree = "<group>"; };
 		2147255A16693684648F1DA86C73A4CB /* fts3_tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = Sources/SQLiteObjc/fts3_tokenizer.h; sourceTree = "<group>"; };
+		21548E97FD63290C3EC44D89CF38DB3A /* YTTCache.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = YTTCache.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		23406B5C7CC6FDDED68FA6A5A09DA84A /* Pods-YTTCache_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YTTCache_Tests-dummy.m"; sourceTree = "<group>"; };
 		25D1F52DB03C471BF99192E3AA18388A /* SQLite-Bridging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SQLite-Bridging.m"; path = "Sources/SQLiteObjc/SQLite-Bridging.m"; sourceTree = "<group>"; };
 		263B7971C24593FAB6B10E05B7A50BA4 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
@@ -140,11 +139,11 @@
 		3218E8BF6C4FDE205C455E69F1C31A57 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		38D913D08A0D848F9D674F983F291247 /* Pods-YTTCache_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YTTCache_Example.modulemap"; sourceTree = "<group>"; };
 		3A95EF7296978149284BA6DDC05DAF0B /* Pods-YTTCache_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YTTCache_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3EC6C666A92BAABA4AA03862394AA4AF /* YTTDataBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YTTDataBase.swift; path = YTTCache/Classes/YTTDataBase.swift; sourceTree = "<group>"; };
 		3F21E4172A69C1D7814C8AB4781A550E /* Pods-YTTCache_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YTTCache_Example-frameworks.sh"; sourceTree = "<group>"; };
 		406BFFFAD7DDA75472712C05A34E0815 /* Pods-YTTCache_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YTTCache_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		431BA713FC3492F844554744963C5C59 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		44D3E08FEFEF98CA79EBE1F595504917 /* Pods-YTTCache_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YTTCache_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		478DB23AA921C0275CC329428BF482B6 /* YTTCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YTTCache-dummy.m"; sourceTree = "<group>"; };
 		49A5A53BEDF3EB036AE2C76BE095EE39 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		4D65B129C4EACDBA36D7244C7D26BB9E /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = Sources/SQLite/Core/Blob.swift; sourceTree = "<group>"; };
 		4D7380CE1671540276312426BFA24465 /* AggregateFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AggregateFunctions.swift; path = Sources/SQLite/Typed/AggregateFunctions.swift; sourceTree = "<group>"; };
@@ -156,7 +155,6 @@
 		5A11F4C275378802D01E7972715890BB /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Sources/SQLite/Typed/Expression.swift; sourceTree = "<group>"; };
 		5C1804DCCAC9D42CF109846C779BA11A /* Pods-YTTCache_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YTTCache_Tests-umbrella.h"; sourceTree = "<group>"; };
 		66889BD27A6EF6E2A5E132DE652650F5 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
-		66B87932CE022AEFA1B54479D3BAC4A0 /* YTTCache.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = YTTCache.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		675917250896CCA02EE5B810F32DFA26 /* Pods-YTTCache_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YTTCache_Tests-resources.sh"; sourceTree = "<group>"; };
 		69716B6EF8EE651C2291F303A6FC4264 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		6AA6BBC719662A2333186D7E7427FB95 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
@@ -164,32 +162,36 @@
 		7155E110B5158F311AFC0928ADAA0727 /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = Sources/SQLite/Core/Statement.swift; sourceTree = "<group>"; };
 		735EA7E1933B4B3701C709797C879378 /* SQLite.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SQLite.swift.modulemap; sourceTree = "<group>"; };
 		73FD462532BECCFE73E457133A62504B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		749116EBB8CF6E5C017AEF9A317E4D9F /* YTTCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YTTCache.swift; path = YTTCache/Classes/YTTCache.swift; sourceTree = "<group>"; };
 		7746D0848D9C75C71E6F954F2BA3DE97 /* SQLite.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-umbrella.h"; sourceTree = "<group>"; };
 		793449C4BF5D22AC28A22C30FFC02F2C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B91FA24C2B897FC947443B971EFC762 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		803D7D09A161657FA4CBAEBA3006502F /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
 		859C6AE43B430848E4F7F7B1661A065C /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AC9EDED4FC7532A6719583AEEF683DF /* YTTDataBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YTTDataBase.swift; path = YTTCache/Classes/YTTDataBase.swift; sourceTree = "<group>"; };
-		8B390DED0CBA0ACA39492C9EAFA51E20 /* YTTCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YTTCache.swift; path = YTTCache/Classes/YTTCache.swift; sourceTree = "<group>"; };
+		8D476DBA02B86823FDC750B0739E13E5 /* YTTCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YTTCache-dummy.m"; sourceTree = "<group>"; };
 		928772596A8DCB5C7608FDC5D142A127 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Sources/SQLite/Helpers.swift; sourceTree = "<group>"; };
-		938C52A0741A3558A87F3022636C9F36 /* YTTCache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YTTCache.xcconfig; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9677EFF1239FD40124F8857B330D2558 /* YTTRequestCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YTTRequestCache.swift; path = YTTCache/Classes/YTTRequestCache.swift; sourceTree = "<group>"; };
+		96A58D635F1C1FB701FA6EBCCE3B63D8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		97B01718B6A6CDBD16BEDCD0EBCC1A89 /* Pods-YTTCache_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YTTCache_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		9CD86EAD5133A68ACA2417F31F6DEA64 /* SQLite.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLite.swift.xcconfig; sourceTree = "<group>"; };
 		A2906C8D61967D8F0A4A875718B1FEF2 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
+		A30D18E6BB3F401E0B88399F3E3C97F9 /* YTTCache.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YTTCache.modulemap; sourceTree = "<group>"; };
 		A4C4EB714781EC640A07FF5C66A565C7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7A1B30D2B059C3A02FFE3299159C76D /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		A7D60C3C867A27C02D9CB077654FB9D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		A8033EB48EBFD1A3BB6E4B7AEA735CF5 /* YTTCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YTTCache.framework; path = YTTCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF8AF0071168A7551C405F9414E98D0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		B3D08F1690BBED219967446575B2335B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
-		B6240BABF164302EA71D73B4944B90E2 /* YTTCache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YTTCache-prefix.pch"; sourceTree = "<group>"; };
 		B6B88DCF5B13E78C93D8CCB6C24847EB /* FTS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5.swift; path = Sources/SQLite/Extensions/FTS5.swift; sourceTree = "<group>"; };
 		B9716525A05FCE7F342BB7F3F5C72145 /* DateAndTimeFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateAndTimeFunctions.swift; path = Sources/SQLite/Typed/DateAndTimeFunctions.swift; sourceTree = "<group>"; };
 		BC79C5FD4E2F232ACD395E90E3737E95 /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = Sources/SQLite/Typed/Schema.swift; sourceTree = "<group>"; };
+		BD4E941781384CFFFC5A1348F0052490 /* YTTCache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YTTCache-prefix.pch"; sourceTree = "<group>"; };
 		C1999141ECDCF450CD3B841ED51A846F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA14DA3BF33119D4D83C623377B3DEB9 /* YTTCache-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YTTCache-umbrella.h"; sourceTree = "<group>"; };
 		CAB3F0D2491343F70CF17414DA78091F /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = Sources/SQLite/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
 		CB37B06501D1063BBF68DC4426F5A37A /* SQLite-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite-Bridging.h"; path = "Sources/SQLiteObjc/include/SQLite-Bridging.h"; sourceTree = "<group>"; };
+		CD0BE21AA852AF64BFDF3F868ADEC063 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE078081CEE19826D317D24008AD1870 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SQLite.framework; path = SQLite.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED9905738F744681CB2CADD81616836 /* CoreFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = Sources/SQLite/Typed/CoreFunctions.swift; sourceTree = "<group>"; };
 		D38AF009D63CD493981606F66EFA97B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -198,8 +200,8 @@
 		E03C918F4EBB6EF87493C7DDD6A8D28E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1EFF6D50B95433D07C34FC79AC2FF31 /* Pods-YTTCache_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YTTCache_Example-umbrella.h"; sourceTree = "<group>"; };
 		EBDF0D928C6E85C2752880F3C558C580 /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
-		ECCC24E3776D64374A4630214846688F /* YTTCache.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YTTCache.modulemap; sourceTree = "<group>"; };
 		F3351A03316D3704493BA896157F266E /* Pods-YTTCache_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YTTCache_Tests.modulemap"; sourceTree = "<group>"; };
+		F7E6EC5E053423BEDE9A665A04071627 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		FC9938E13D4202C33B63E4A0B9391279 /* RTree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RTree.swift; path = Sources/SQLite/Extensions/RTree.swift; sourceTree = "<group>"; };
 		FCE07E6FB5D655CA39902B15081D9D62 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		FEE97DA1F7060286FC68F5A9122709B9 /* Setter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = Sources/SQLite/Typed/Setter.swift; sourceTree = "<group>"; };
@@ -310,18 +312,6 @@
 			path = "Target Support Files/Pods-YTTCache_Example";
 			sourceTree = "<group>";
 		};
-		1189AF138BC8BAEB22A28CBCEF985BAC /* YTTCache */ = {
-			isa = PBXGroup;
-			children = (
-				8B390DED0CBA0ACA39492C9EAFA51E20 /* YTTCache.swift */,
-				8AC9EDED4FC7532A6719583AEEF683DF /* YTTDataBase.swift */,
-				5309060D3E79BD023EDE8955307C227F /* Pod */,
-				BFB73C8EF579FF73C31E1D414FB6A452 /* Support Files */,
-			);
-			name = YTTCache;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		1945636CF31FD88DAD08CD6AD7EAE6EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,14 +338,12 @@
 			path = "../Target Support Files/SQLite.swift";
 			sourceTree = "<group>";
 		};
-		5309060D3E79BD023EDE8955307C227F /* Pod */ = {
+		5D4824B8C64912CC4A389F553F503E8F /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				18663FB19D75CCBAA821507FE46008D8 /* LICENSE */,
-				073CC29E92A2B0C29A74F9E288D9BCF7 /* README.md */,
-				66B87932CE022AEFA1B54479D3BAC4A0 /* YTTCache.podspec */,
+				D333EA7C03D94D5FCC3C5DE44AA7263D /* YTTCache */,
 			);
-			name = Pod;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		639D9E2A13C2C77849D1688401FE4363 /* Pods */ = {
@@ -394,6 +382,20 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		7337F65C5F64289513104E1AABAA10DC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD0BE21AA852AF64BFDF3F868ADEC063 /* Info.plist */,
+				A30D18E6BB3F401E0B88399F3E3C97F9 /* YTTCache.modulemap */,
+				0CF0146FF18535DE73A7B0A2DD115A9B /* YTTCache.xcconfig */,
+				8D476DBA02B86823FDC750B0739E13E5 /* YTTCache-dummy.m */,
+				BD4E941781384CFFFC5A1348F0052490 /* YTTCache-prefix.pch */,
+				CA14DA3BF33119D4D83C623377B3DEB9 /* YTTCache-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/YTTCache";
+			sourceTree = "<group>";
+		};
 		77E24ED18BC8071085CED19A35117154 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,12 +409,22 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				E534392F2F08CEE159A46E0575F24BE7 /* Development Pods */,
+				5D4824B8C64912CC4A389F553F503E8F /* Development Pods */,
 				77E24ED18BC8071085CED19A35117154 /* Frameworks */,
 				639D9E2A13C2C77849D1688401FE4363 /* Pods */,
 				1945636CF31FD88DAD08CD6AD7EAE6EC /* Products */,
 				6C007A016234F3B186456BED6EC2B511 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9A8AE022D07AD6D868125D7B6DC907DA /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				96A58D635F1C1FB701FA6EBCCE3B63D8 /* LICENSE */,
+				F7E6EC5E053423BEDE9A665A04071627 /* README.md */,
+				21548E97FD63290C3EC44D89CF38DB3A /* YTTCache.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		A28A4EF1B9BBC055892E86FFBB4AA215 /* iOS */ = {
@@ -435,20 +447,6 @@
 			);
 			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
-			sourceTree = "<group>";
-		};
-		BFB73C8EF579FF73C31E1D414FB6A452 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				043740151009868EF256B20C245C769D /* Info.plist */,
-				ECCC24E3776D64374A4630214846688F /* YTTCache.modulemap */,
-				938C52A0741A3558A87F3022636C9F36 /* YTTCache.xcconfig */,
-				478DB23AA921C0275CC329428BF482B6 /* YTTCache-dummy.m */,
-				B6240BABF164302EA71D73B4944B90E2 /* YTTCache-prefix.pch */,
-				100E0EB26AE3D9734D7C404D3EE78167 /* YTTCache-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/YTTCache";
 			sourceTree = "<group>";
 		};
 		C396992D39DE17700FFAF62BD9D2FD47 /* Support Files */ = {
@@ -497,12 +495,17 @@
 			name = standard;
 			sourceTree = "<group>";
 		};
-		E534392F2F08CEE159A46E0575F24BE7 /* Development Pods */ = {
+		D333EA7C03D94D5FCC3C5DE44AA7263D /* YTTCache */ = {
 			isa = PBXGroup;
 			children = (
-				1189AF138BC8BAEB22A28CBCEF985BAC /* YTTCache */,
+				749116EBB8CF6E5C017AEF9A317E4D9F /* YTTCache.swift */,
+				3EC6C666A92BAABA4AA03862394AA4AF /* YTTDataBase.swift */,
+				9677EFF1239FD40124F8857B330D2558 /* YTTRequestCache.swift */,
+				9A8AE022D07AD6D868125D7B6DC907DA /* Pod */,
+				7337F65C5F64289513104E1AABAA10DC /* Support Files */,
 			);
-			name = "Development Pods";
+			name = YTTCache;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -601,7 +604,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF1CCA67C8E16FA9E87375E2A3133547 /* Build configuration list for PBXNativeTarget "YTTCache" */;
 			buildPhases = (
-				F09B4AA0C4C3E6D682C50FC8380AD417 /* Sources */,
+				A636BA1146F024B54D13C2BB06E8435C /* Sources */,
 				A54AF215146B6A210E7EC7E32BFFA1EB /* Frameworks */,
 				CA26D092174B347A21434C6549377219 /* Headers */,
 			);
@@ -698,6 +701,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A636BA1146F024B54D13C2BB06E8435C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E615D96801E43DBE410E21F15E24E179 /* YTTCache-dummy.m in Sources */,
+				588859D981CC9B46782486B4544CB61F /* YTTCache.swift in Sources */,
+				FB398C4077F9E44475CBD5DE392C105E /* YTTDataBase.swift in Sources */,
+				0E9DDDD320C28C58187288F89FF05A43 /* YTTRequestCache.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C513973AC6B327B87CE5BB4B13E2D265 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -741,16 +755,6 @@
 				69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */,
 				35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */,
 				756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F09B4AA0C4C3E6D682C50FC8380AD417 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B6C0FB8A5EEAB7DFAC20F3BBEAEC6DD6 /* YTTCache-dummy.m in Sources */,
-				1AEF8E9C1E4B3929C627D87BD9F63F4F /* YTTCache.swift in Sources */,
-				E51A377C8D94D4FD04D22FCC93EE16DC /* YTTDataBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -989,7 +993,7 @@
 		};
 		A3D13F37B87687FDF85656EC0FFF3864 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 938C52A0741A3558A87F3022636C9F36 /* YTTCache.xcconfig */;
+			baseConfigurationReference = 0CF0146FF18535DE73A7B0A2DD115A9B /* YTTCache.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1090,7 +1094,7 @@
 		};
 		CF49474A51C3ABCCB081557DBDF65579 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 938C52A0741A3558A87F3022636C9F36 /* YTTCache.xcconfig */;
+			baseConfigurationReference = 0CF0146FF18535DE73A7B0A2DD115A9B /* YTTCache.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

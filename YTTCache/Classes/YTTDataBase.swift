@@ -11,11 +11,16 @@ import SQLite
 
 class YTTDataBase {
     
+    /// 缓存队列
     private let cacheQueue = DispatchQueue(label: "com.andycui.ytt.cache")
+    /// 表格
     private let cacheTb = Table("cacheTb")
     private let id = Expression<Int64>("id")
+    /// 缓存数据
     private let cache_data = Expression<Blob>("cache_data")
+    /// 缓存键值
     private let cache_key = Expression<String>("cache_key")
+    /// 添加缓存时间
     private let cache_time = Expression<Double>("cache_time")
     
     /// 获取数据库
@@ -23,7 +28,6 @@ class YTTDataBase {
         // 会自动创建 SQLite 文件,但如果路径不存在创建失败
         if let dbPath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first {
             do {
-                print(dbPath)
                 let db = try Connection(dbPath + "/YTTCache.sqlite3")
                 try db.run(cacheTb.create(temporary: false, ifNotExists: true, block: { (t) in
                     t.column(id, primaryKey: .autoincrement)
@@ -40,6 +44,12 @@ class YTTDataBase {
         return nil
     }()
     
+    /// 添加数据
+    ///
+    /// - Parameters:
+    ///   - data: 缓存数据
+    ///   - key: 数据键值
+    /// - Returns: 是否添加成功
     func insert(cache_data data: Data, cache_key key: String) -> Bool {
         var result: Bool = false
         cacheQueue.sync {
@@ -54,6 +64,10 @@ class YTTDataBase {
         return result
     }
     
+    /// 查询缓存数据
+    ///
+    /// - Parameter key: 缓存数据键值
+    /// - Returns: 缓存数据与缓存时间
     func select(cache_key key: String) -> (content: Data, time: TimeInterval)? {
         var result: (content: Data, time: TimeInterval)?
         cacheQueue.sync {
@@ -69,6 +83,12 @@ class YTTDataBase {
         return result
     }
     
+    /// 更新缓存数据
+    ///
+    /// - Parameters:
+    ///   - data: 缓存数据
+    ///   - key: 数据键值
+    /// - Returns: 是否更新成功
     func update(cache_data data: Data, cache_key key: String) -> Bool {
         var result: Bool = false
         cacheQueue.sync {
@@ -84,6 +104,10 @@ class YTTDataBase {
         return result
     }
     
+    /// 根据键值删除数据
+    ///
+    /// - Parameter key: 数据键值
+    /// - Returns: 是否删除成功
     func delete(cache_key key: String) -> Bool {
         var result: Bool = false
         cacheQueue.sync {
@@ -98,6 +122,9 @@ class YTTDataBase {
         return result
     }
     
+    /// 删除全部数据
+    ///
+    /// - Returns: 是否删除成功
     func deleteAll() -> Bool {
         var result: Bool = false
         cacheQueue.sync {
@@ -106,7 +133,7 @@ class YTTDataBase {
                     result = true
                 }
             } catch {
-            print(error)
+                print(error)
             }
         }
         return result

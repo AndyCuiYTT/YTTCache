@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        YTTCache.putString(object: "qqqqqqqq", key: "1234")
-        YTTCache.updateString(object: "吃饭GV哈哈,办好几回,吧", key: "1234")
-        print(YTTCache.getString(key: "1234"))
+        YTTCache.storeString("qqqqqqqq", key: "1234")
+        YTTCache.updateStoreString("吃饭GV哈哈,办好几回,吧", key: "1234")
+        print(YTTCache.stringForKey("1234"))
         
         
     }
