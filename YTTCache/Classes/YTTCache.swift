@@ -41,9 +41,13 @@ public class YTTCache {
     ///
     /// - Parameter key: 键值
     /// - Returns: 获取到的字符串
-    public class func stringForKey(_ key: String) -> String? {
-        if let result = YTTDataBase().select(cache_key: key), let object = String(data: result.content, encoding: .utf8) {
-            return object
+    public class func stringForKey(_ key: String, timeoutIntervalForCache interval: TimeInterval = .greatestFiniteMagnitude) -> String? {
+        if let result = YTTDataBase().select(cache_key: key) {
+            if result.time + interval > Date().timeIntervalSince1970 {
+                let object = String(data: result.content, encoding: .utf8)
+                return object
+            }
+            let _ = YTTDataBase().delete(cache_key: key)
         }
         return nil
     }

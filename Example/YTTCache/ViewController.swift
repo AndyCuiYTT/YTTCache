@@ -13,14 +13,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        YTTCache.storeString("qqqqqqqq", key: "1234")
-        YTTCache.updateStoreString("吃饭GV哈哈,办好几回,吧", key: "1234")
-        print(YTTCache.stringForKey("1234"))
-        YTTCache.removeCacheForKey("key")
-        YTTCache.cleanCache()
+//
+//        YTTCache.storeString("1234", key: "1234")
+//        YTTCache.storeString("1234", key: "QQQQQQ")
+//        YTTCache.updateStoreString("吃饭GV哈哈,办好几回,吧", key: "1234")
+//        print(YTTCache.stringForKey("1234"))
+//        print(YTTCache.stringForKey("QQQQQQ"))
+//        YTTCache.removeCacheForKey("key")
+//        YTTCache.cleanCache()
         
-        YTTRequestCache.removeJSONStringForKey(url: <#T##String#>, param: <#T##[String : Any]#>)
+        YTTRequestCache.storeJSONString("{'name':'Andy','age':23}", url: "http://www.baidu.com", param: ["UID" : 00001])
+        print(YTTRequestCache.JSONStringForKey(url: "http://www.baidu.com", param: ["UID" : 00001]))
+        
+//        YTTRequestCache.removeJSONStringForKey(url: <#T##String#>, param: <#T##[String : Any]#>)
         
     }
 

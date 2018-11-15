@@ -18,14 +18,15 @@ public class YTTRequestCache {
     ///   - param: 请求参数
     /// - Returns: 是否缓存成功
     public class func storeJSONString(_ jsonStr: String, url: String, param: [String: Any]) -> Bool {
-        var key = url + "-->"
-        param.forEach { (item) in
-            key += "\(item.key):\(item.value)"
+        do {
+            let paramData = try JSONSerialization.data(withJSONObject: param, options: [])
+            if let paramStr = String(data: paramData, encoding: .utf8) {
+                return YTTCache.storeString(jsonStr, key: url + "-->" + paramStr)
+            }
+        } catch {
+            YTTLog(error)
         }
-        if let data = jsonStr.data(using: .utf8) {
-            return YTTDataBase().insert(cache_data: data, cache_key: key)
-        }
-        return false        
+        return false
     }
     
     
@@ -37,16 +38,13 @@ public class YTTRequestCache {
     ///   - timeoutIntervalForCache: 缓存时间(以秒为单位),默认永久
     /// - Returns: 缓存 JSON 字符串,没有返回 nil
     public class func JSONStringForKey(url: String, param: [String: Any], timeoutIntervalForCache interval: TimeInterval = .greatestFiniteMagnitude) -> String? {
-        var key = url + "-->"
-        param.forEach { (item) in
-            key += "\(item.key):\(item.value)"
-        }
-        if let result = YTTDataBase().select(cache_key: key) {
-            if result.time + interval > Date().timeIntervalSince1970 {
-                let object = String(data: result.content, encoding: .utf8)
-                return object
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: param, options: [])
+            if let jsonStr = String(data: jsonData, encoding: .utf8) {
+                return YTTCache.stringForKey(url + "-->" + jsonStr, timeoutIntervalForCache: interval)
             }
-            let _ = YTTDataBase().delete(cache_key: key)
+        } catch {
+            YTTLog(error)
         }
         return nil
     }
@@ -58,11 +56,16 @@ public class YTTRequestCache {
     ///   - param: 请求参数
     /// - Returns: 是否删除成功
     public class func removeJSONStringForKey(url: String, param: [String: Any]) -> Bool {
-        var key = url + "-->"
-        param.forEach { (item) in
-            key += "\(item.key):\(item.value)"
+        
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: param, options: [])
+            if let jsonStr = String(data: jsonData, encoding: .utf8) {
+                return YTTCache.removeCacheForKey(url + "-->" + jsonStr)
+            }
+        } catch {
+            YTTLog(error)
         }
-        return YTTDataBase().delete(cache_key: key)
+        return false
     }
     
     

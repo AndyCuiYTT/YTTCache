@@ -6,7 +6,7 @@ target 'YTTCache_Example' do
 
   target 'YTTCache_Tests' do
     inherit! :search_paths
-
+    pod 'YTTCache', :path => '../'  
     pod 'FBSnapshotTestCase' , '~> 2.1.4'
   end
 end

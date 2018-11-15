@@ -8,6 +8,17 @@
 
 import UIKit
 import SQLite
+import CommonCrypto
+
+func YTTLog<T>(_ message: T, filePath: String = #file, rowCount: Int = #line) {
+    #if DEBUG
+        let fileName = (filePath as NSString).lastPathComponent.replacingOccurrences(of: ".swift", with: "")
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm:ss-SSS"
+        let time = formatter.string(from: Date())
+        print("\(time) " + fileName + ": " + "\(rowCount)" + " --> \(message)")
+    #endif
+}
 
 class YTTDataBase {
     
@@ -22,6 +33,8 @@ class YTTDataBase {
     private let cache_key = Expression<String>("cache_key")
     /// 添加缓存时间
     private let cache_time = Expression<Double>("cache_time")
+    /// 数据校验字段
+    private let cache_data_MD5 = Expression<String>("cache_data_MD5")
     
     /// 获取数据库
     lazy var dataBase: Connection? = {
@@ -34,11 +47,11 @@ class YTTDataBase {
                     t.column(cache_data)
                     t.column(cache_key, unique: true)
                     t.column(cache_time, defaultValue: Date().timeIntervalSince1970)
+                    t.column(cache_data_MD5)
                 }))
                 return db
             } catch {
-                print(error)
-                return nil
+                YTTLog(error)
             }
         }
         return nil
@@ -54,11 +67,16 @@ class YTTDataBase {
         var result: Bool = false
         cacheQueue.sync {
             do {
+                // 插入前先判断是否已有该条数据,存在则删除
+                if let count = try dataBase?.scalar(cacheTb.filter(cache_key == key).count), count > 0 {
+                    try dataBase?.run(cacheTb.filter(cache_key == key).delete())
+                }
+                
                 let blob = Blob(bytes: (data as NSData).bytes, length: data.count)
-                let _ = try dataBase?.run(cacheTb.insert(cache_data <- blob, cache_key <- key))
+                let _ = try dataBase?.run(cacheTb.insert(cache_data <- blob, cache_key <- key, cache_data_MD5 <- MD5(data)))
                 result = true
             } catch {
-                print(error)
+                YTTLog(error)
             }
         }
         return result
@@ -72,12 +90,19 @@ class YTTDataBase {
         var result: (content: Data, time: TimeInterval)?
         cacheQueue.sync {
             do {
-                let query = cacheTb.select(cache_data, cache_time).filter(cache_key == key)
+                let query = cacheTb.select(cache_data, cache_time, cache_data_MD5).filter(cache_key == key)
                 if let db = dataBase, let row = Array(try db.prepare(query)).first {
-                   result = (Data(bytes: row[cache_data].bytes), row[cache_time])
+                    
+                    let data = Data(bytes: row[cache_data].bytes)
+                    if MD5(data) == row[cache_data_MD5] {
+                        result = (Data(bytes: row[cache_data].bytes), row[cache_time])
+                    } else {
+                        // 校验失败删除
+                        try db.run(cacheTb.filter(cache_key == key).delete())
+                    }
                 }
             } catch {
-                print(error)
+                YTTLog(error)
             }
         }
         return result
@@ -94,11 +119,11 @@ class YTTDataBase {
         cacheQueue.sync {
             do {
                 let blob = Blob(bytes: (data as NSData).bytes, length: data.count)
-                if let db = dataBase, try db.run(cacheTb.filter(cache_key == key).update(cache_data <- blob, cache_time <- Date().timeIntervalSince1970)) > 0 {
+                if let db = dataBase, try db.run(cacheTb.filter(cache_key == key).update(cache_data <- blob, cache_time <- Date().timeIntervalSince1970, cache_data_MD5 <- MD5(data))) > 0 {
                     result = true
                 }
             } catch {
-                print(error)
+                YTTLog(error)
             }
         }
         return result
@@ -116,7 +141,7 @@ class YTTDataBase {
                     result = true
                 }
             } catch {
-                print(error)
+                YTTLog(error)
             }
         }
         return result
@@ -133,9 +158,25 @@ class YTTDataBase {
                     result = true
                 }
             } catch {
-                print(error)
+                YTTLog(error)
             }
         }
         return result
     }
+    
+    private func MD5(_ data: Data) -> String {
+        
+        return data.withUnsafeBytes { (cStr: UnsafePointer<UInt8>) -> String in
+            let result = UnsafeMutablePointer<UInt8>.allocate(capacity: Int(CC_MD5_DIGEST_LENGTH))
+            CC_MD5(cStr, CC_LONG(data.count), result)
+            let resultStr: NSMutableString = NSMutableString()
+            for i in 0 ..< Int(CC_MD5_DIGEST_LENGTH) {
+                resultStr.appendFormat("%02x", result[i])
+            }
+            result.deallocate()
+            return resultStr as String
+        }
+    }
 }
+
+
