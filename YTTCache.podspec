@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YTTCache'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = '简单数据缓存.'
 
 # This description is used to generate tags and improve search results.
@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
     简单数据缓存.采用键值对存储,用于网络请求缓存.
     缓存具有时效性以及校验功能.
+    通过类扩展简化操作.
                        DESC
 
   s.homepage         = 'https://github.com/AndyCuiYTT/YTTCache'

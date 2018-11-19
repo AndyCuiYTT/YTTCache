@@ -55,7 +55,7 @@ public class YTTRequestCache {
     ///   - url: 请求 URL 地址
     ///   - param: 请求参数
     /// - Returns: 是否删除成功
-    public class func removeJSONStringForKey(url: String, param: [String: Any]) -> Bool {
+    public class func removeJSONStringByKey(url: String, param: [String: Any]) -> Bool {
         
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: param, options: [])

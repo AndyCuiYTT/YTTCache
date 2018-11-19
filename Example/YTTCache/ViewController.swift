@@ -22,10 +22,28 @@ class ViewController: UIViewController {
 //        YTTCache.removeCacheForKey("key")
 //        YTTCache.cleanCache()
         
-        YTTRequestCache.storeJSONString("{'name':'Andy','age':23}", url: "http://www.baidu.com", param: ["UID" : 00001])
-        print(YTTRequestCache.JSONStringForKey(url: "http://www.baidu.com", param: ["UID" : 00001]))
-        
+//        YTTRequestCache.storeJSONString("{'name':'Andy','age':23}", url: "http://www.baidu.com", param: ["UID" : 00001])
+//        print(YTTRequestCache.JSONStringForKey(url: "http://www.baidu.com", param: ["UID" : 00001]))
+//
 //        YTTRequestCache.removeJSONStringForKey(url: <#T##String#>, param: <#T##[String : Any]#>)
+        
+//        let students = [["name": "Andy", "age": 24],
+//                     ["name": "Arun", "age": 29],
+//                     ["name": "Json", "age": 24]]
+//        print(students)
+//        print(students.cache.storeWithKey("students"))
+//        let arr = Array<Any>.initWithCache("students")
+//        print(arr)
+        
+        let imageView = UIImageView(frame: CGRect(x: 20, y: 20, width: 100, height: 100))
+        self.view.addSubview(imageView)
+        self.view.backgroundColor = UIColor.cyan
+        
+        print(UIImage(named: "test")?.cache.storeWithKey("image://test.png")) 
+        imageView.image = UIImage.initWithCache("image://test.png")
+        
+        
+        
         
     }
 
