@@ -37,7 +37,6 @@
 		6A4841DE26A5A8ED6AFC458EC5BAF70A /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A339B15795A1DF02A764142D83D36B7 /* Value.swift */; };
 		6BF6BDC3C5C8C59A652CEBC151FFF61C /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F4C275378802D01E7972715890BB /* Expression.swift */; };
 		6F4D3F6677B37A8BA4F55444A9D2498B /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3F09A40FC16D9ADFACD17DDFC2DCA /* Connection.swift */; };
-		703F972D21A27CE100E5C125 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703F972C21A27CE000E5C125 /* StringExtension.swift */; };
 		703F972E21A27CE100E5C125 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703F972C21A27CE000E5C125 /* StringExtension.swift */; };
 		723B9D6A456E5C1F2B5976250AAFDB59 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273CA9B50F7FBFACA0B03C8F5C6B8786 /* SQLite.framework */; };
 		756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A1B30D2B059C3A02FFE3299159C76D /* UIImage+Snapshot.m */; };
@@ -765,7 +764,6 @@
 			files = (
 				506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */,
 				BE14F2198CDB0DAD98A567981D21C7A1 /* FBSnapshotTestCase.m in Sources */,
-				703F972D21A27CE100E5C125 /* StringExtension.swift in Sources */,
 				DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */,
 				A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */,
 				1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */,
