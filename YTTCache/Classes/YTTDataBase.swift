@@ -68,7 +68,7 @@ class YTTDataBase {
         cacheQueue.sync {
             do {
                 let blob = Blob(bytes: (data as NSData).bytes, length: data.count)
-                // 插入前先判断是否已有该条数据,存在则删除
+                // 插入前先判断是否已有该条数据,更新操作
                 if let count = try dataBase?.scalar(cacheTb.filter(cache_key == key).count), count > 0 {
                     if let db = dataBase, try db.run(cacheTb.filter(cache_key == key).update(cache_data <- blob, cache_time <- Date().timeIntervalSince1970, cache_data_MD5 <- MD5(data))) > 0 {
                         result = true
