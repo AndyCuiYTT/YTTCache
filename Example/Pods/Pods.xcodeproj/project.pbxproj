@@ -37,6 +37,7 @@
 		6A4841DE26A5A8ED6AFC458EC5BAF70A /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A339B15795A1DF02A764142D83D36B7 /* Value.swift */; };
 		6BF6BDC3C5C8C59A652CEBC151FFF61C /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F4C275378802D01E7972715890BB /* Expression.swift */; };
 		6F4D3F6677B37A8BA4F55444A9D2498B /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3F09A40FC16D9ADFACD17DDFC2DCA /* Connection.swift */; };
+		703F972A21A2661D00E5C125 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703F972821A2661D00E5C125 /* StringExtension.swift */; };
 		723B9D6A456E5C1F2B5976250AAFDB59 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273CA9B50F7FBFACA0B03C8F5C6B8786 /* SQLite.framework */; };
 		756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A1B30D2B059C3A02FFE3299159C76D /* UIImage+Snapshot.m */; };
 		799BE3AD820AFE7EF7EECDA3C5656244 /* Pods-YTTCache_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1EFF6D50B95433D07C34FC79AC2FF31 /* Pods-YTTCache_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -159,6 +160,7 @@
 		69716B6EF8EE651C2291F303A6FC4264 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		6AA6BBC719662A2333186D7E7427FB95 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		6FD12D8AF2F72E4F1463D878A0EAF0DB /* Pods_YTTCache_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YTTCache_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		703F972821A2661D00E5C125 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7155E110B5158F311AFC0928ADAA0727 /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = Sources/SQLite/Core/Statement.swift; sourceTree = "<group>"; };
 		735EA7E1933B4B3701C709797C879378 /* SQLite.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SQLite.swift.modulemap; sourceTree = "<group>"; };
 		73FD462532BECCFE73E457133A62504B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -381,6 +383,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		703F972721A265D900E5C125 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				703F972821A2661D00E5C125 /* StringExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		7337F65C5F64289513104E1AABAA10DC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +506,7 @@
 		D333EA7C03D94D5FCC3C5DE44AA7263D /* YTTCache */ = {
 			isa = PBXGroup;
 			children = (
+				703F972721A265D900E5C125 /* Extension */,
 				749116EBB8CF6E5C017AEF9A317E4D9F /* YTTCache.swift */,
 				3EC6C666A92BAABA4AA03862394AA4AF /* YTTDataBase.swift */,
 				9677EFF1239FD40124F8857B330D2558 /* YTTRequestCache.swift */,
@@ -710,6 +721,7 @@
 			files = (
 				E615D96801E43DBE410E21F15E24E179 /* YTTCache-dummy.m in Sources */,
 				588859D981CC9B46782486B4544CB61F /* YTTCache.swift in Sources */,
+				703F972A21A2661D00E5C125 /* StringExtension.swift in Sources */,
 				FB398C4077F9E44475CBD5DE392C105E /* YTTDataBase.swift in Sources */,
 				0E9DDDD320C28C58187288F89FF05A43 /* YTTRequestCache.swift in Sources */,
 			);

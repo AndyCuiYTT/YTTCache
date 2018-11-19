@@ -67,14 +67,17 @@ class YTTDataBase {
         var result: Bool = false
         cacheQueue.sync {
             do {
+                let blob = Blob(bytes: (data as NSData).bytes, length: data.count)
                 // 插入前先判断是否已有该条数据,存在则删除
                 if let count = try dataBase?.scalar(cacheTb.filter(cache_key == key).count), count > 0 {
-                    try dataBase?.run(cacheTb.filter(cache_key == key).delete())
+                    if let db = dataBase, try db.run(cacheTb.filter(cache_key == key).update(cache_data <- blob, cache_time <- Date().timeIntervalSince1970, cache_data_MD5 <- MD5(data))) > 0 {
+                        result = true
+                    }
+                } else {
+                    if let db = dataBase, try db.run(cacheTb.insert(cache_data <- blob, cache_key <- key, cache_data_MD5 <- MD5(data))) > 0 {
+                        result = true
+                    }
                 }
-                
-                let blob = Blob(bytes: (data as NSData).bytes, length: data.count)
-                let _ = try dataBase?.run(cacheTb.insert(cache_data <- blob, cache_key <- key, cache_data_MD5 <- MD5(data)))
-                result = true
             } catch {
                 YTTLog(error)
             }

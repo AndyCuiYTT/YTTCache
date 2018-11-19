@@ -60,7 +60,7 @@ public class YTTRequestCache {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: param, options: [])
             if let jsonStr = String(data: jsonData, encoding: .utf8) {
-                return YTTCache.removeCacheForKey(url + "-->" + jsonStr)
+                return YTTCache.removeCacheByKey(url + "-->" + jsonStr)
             }
         } catch {
             YTTLog(error)
