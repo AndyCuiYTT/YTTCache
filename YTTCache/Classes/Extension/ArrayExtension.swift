@@ -12,13 +12,15 @@ public extension Array {
         return YTTCacheArray<Element>(self)
     }
     
-    static func initWithCache(_ key: String,  timeoutIntervalForCache interval: TimeInterval = .greatestFiniteMagnitude) -> Array<Element>? {
-        if let data = YTTCache.dataForKey(key, timeoutIntervalForCache: interval) {
-            if let array = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Array<Element> {
-                return array
+    static func arrayWithCache(_ key: String,  timeoutIntervalForCache interval: TimeInterval = .greatestFiniteMagnitude, result: ((Array<Element>?) -> Void)?) {
+        
+        YTTCache.dataForKey(key, timeoutIntervalForCache: interval) { (data) in
+            if let da = data, let dic = try? JSONSerialization.jsonObject(with: da, options: .allowFragments) as? Array<Element> {
+                result?(dic)
+            }else {
+                result?(nil)
             }
         }
-        return nil
     }
     
     
@@ -34,16 +36,16 @@ public class YTTCacheArray<T> {
     
     /// 缓存数据
     ///
-    /// - Parameter key: 键值
-    /// - Returns: 是否缓存成功
-    public func storeWithKey(_ key: String) -> Bool {
+    /// - key: 键值
+    /// - result: 是否缓存成功
+    public func storeWithKey(_ key: String, result: ((Bool) -> Void)?) {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: array, options: [])
-            return YTTCache.storeData(jsonData, key: key)
+            YTTCache.storeData(jsonData, key: key, result: result)
         } catch  {
             YTTLog(error)
+            result?(false)
         }
-        return false
     }
     
 }

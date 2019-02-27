@@ -12,14 +12,16 @@ public extension UIImage {
         return YTTCacheUIImage(self)
     }
     
-    static func initWithCache(_ key: String,  timeoutIntervalForCache interval: TimeInterval = .greatestFiniteMagnitude) -> UIImage? {
-        if let data = YTTCache.dataForKey(key, timeoutIntervalForCache: interval) {
-            return UIImage(data: data)
+    static func imageWithCache(_ key: String,  timeoutIntervalForCache interval: TimeInterval = .greatestFiniteMagnitude, result: ((UIImage?) -> Void)?) {
+        
+        YTTCache.dataForKey(key, timeoutIntervalForCache: interval) { (data) in
+            if let da = data, let image = UIImage(data: da) {
+                result?(image)
+            }else {
+                result?(nil)
+            }
         }
-        return nil
     }
-    
-    
 }
 
 public class YTTCacheUIImage {
@@ -32,13 +34,14 @@ public class YTTCacheUIImage {
     
     /// 缓存数据
     ///
-    /// - Parameter key: 键值
-    /// - Returns: 是否缓存成功
-    public func storeWithKey(_ key: String) -> Bool {
+    /// - key: 键值
+    /// - result: 是否缓存成功
+    public func storeWithKey(_ key: String, result: ((Bool) -> Void)?) {
         if let data = image.pngData() {
-            return YTTCache.storeData(data, key: key)
+            return YTTCache.storeData(data, key: key, result: result)
+        }else {
+            result?(false)
         }
-        return false
     }
     
 }

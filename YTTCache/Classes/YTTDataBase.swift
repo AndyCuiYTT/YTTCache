@@ -57,48 +57,51 @@ class YTTDataBase {
         return nil
     }()
     
+    
     /// 添加数据
     ///
     /// - Parameters:
-    ///   - data: 缓存数据
-    ///   - key: 数据键值
-    /// - Returns: 是否添加成功
-    func insert(cache_data data: Data, cache_key key: String) -> Bool {
-        var result: Bool = false
+    ///   - data: 数据内容
+    ///   - key: 键值
+    ///   - result: 添加结果
+    func insert(cache_data data: Data, cache_key key: String, result: ((Bool) -> Void)?) {
         cacheQueue.sync {
+            var res: Bool = false
             do {
                 let blob = Blob(bytes: (data as NSData).bytes, length: data.count)
                 // 插入前先判断是否已有该条数据,更新操作
                 if let count = try dataBase?.scalar(cacheTb.filter(cache_key == key).count), count > 0 {
                     if let db = dataBase, try db.run(cacheTb.filter(cache_key == key).update(cache_data <- blob, cache_time <- Date().timeIntervalSince1970, cache_data_MD5 <- MD5(data))) > 0 {
-                        result = true
+                        res = true
                     }
                 } else {
                     if let db = dataBase, try db.run(cacheTb.insert(cache_data <- blob, cache_key <- key, cache_data_MD5 <- MD5(data))) > 0 {
-                        result = true
+                        res = true
                     }
                 }
             } catch {
                 YTTLog(error)
             }
+            result?(res)
         }
-        return result
     }
     
-    /// 查询缓存数据
+    
+    /// 查询数据
     ///
-    /// - Parameter key: 缓存数据键值
-    /// - Returns: 缓存数据与缓存时间
-    func select(cache_key key: String) -> (content: Data, time: TimeInterval)? {
-        var result: (content: Data, time: TimeInterval)?
+    /// - Parameters:
+    ///   - key: 键值
+    ///   - result: 查询结果
+    func select(cache_key key: String, result: (((Data, TimeInterval)?) -> Void)?) {
         cacheQueue.sync {
+            var res: (content: Data, time: TimeInterval)?
             do {
                 let query = cacheTb.select(cache_data, cache_time, cache_data_MD5).filter(cache_key == key)
                 if let db = dataBase, let row = Array(try db.prepare(query)).first {
                     
                     let data = Data(bytes: row[cache_data].bytes)
                     if MD5(data) == row[cache_data_MD5] {
-                        result = (Data(bytes: row[cache_data].bytes), row[cache_time])
+                        res = (Data(bytes: row[cache_data].bytes), row[cache_time])
                     } else {
                         // 校验失败删除
                         try db.run(cacheTb.filter(cache_key == key).delete())
@@ -107,64 +110,70 @@ class YTTDataBase {
             } catch {
                 YTTLog(error)
             }
+            result?(res)
         }
-        return result
     }
     
-    /// 更新缓存数据
+    
+    /// 更新数据
     ///
     /// - Parameters:
-    ///   - data: 缓存数据
-    ///   - key: 数据键值
-    /// - Returns: 是否更新成功
-    func update(cache_data data: Data, cache_key key: String) -> Bool {
-        var result: Bool = false
+    ///   - data: 数据内容
+    ///   - key: 键值
+    ///   - result: 更新结果
+    func update(cache_data data: Data, cache_key key: String, result: ((Bool) -> Void)?) {
         cacheQueue.sync {
+            var res: Bool = false
             do {
                 let blob = Blob(bytes: (data as NSData).bytes, length: data.count)
                 if let db = dataBase, try db.run(cacheTb.filter(cache_key == key).update(cache_data <- blob, cache_time <- Date().timeIntervalSince1970, cache_data_MD5 <- MD5(data))) > 0 {
-                    result = true
+                    res = true
                 }
             } catch {
                 YTTLog(error)
             }
+            result?(res)
         }
-        return result
     }
     
-    /// 根据键值删除数据
+    
+    /// 根绝 id 删除数据
     ///
-    /// - Parameter key: 数据键值
-    /// - Returns: 是否删除成功
-    func delete(cache_key key: String) -> Bool {
-        var result: Bool = false
+    /// - Parameters:
+    ///   - key: key
+    ///   - result: 结果
+    func delete(cache_key key: String, result: ((Bool) -> Void)?) {
         cacheQueue.sync {
+            var res: Bool = false
             do {
                 if let db = dataBase, try db.run(cacheTb.filter(cache_key == key).delete()) > 0 {
-                    result = true
+                    res = true
                 }
             } catch {
                 YTTLog(error)
             }
+            result?(res)
         }
-        return result
+        
     }
     
-    /// 删除全部数据
+    
+    /// 删除全部缓存
     ///
-    /// - Returns: 是否删除成功
-    func deleteAll() -> Bool {
-        var result: Bool = false
+    /// - Parameter result: 删除结果
+    func deleteAll(result: ((Bool) -> Void)?) {
         cacheQueue.sync {
+            var res: Bool = false
             do {
                 if let db = dataBase, try db.run(cacheTb.delete()) > 0 {
-                    result = true
+                    res = true
                 }
             } catch {
                 YTTLog(error)
             }
+            result?(res)
         }
-        return result
+        
     }
     
     private func MD5(_ data: Data) -> String {

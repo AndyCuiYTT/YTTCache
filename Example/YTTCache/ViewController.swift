@@ -39,8 +39,8 @@ class ViewController: UIViewController {
         self.view.addSubview(imageView)
         self.view.backgroundColor = UIColor.cyan
         
-        print(UIImage(named: "test")?.cache.storeWithKey("image://test.png")) 
-        imageView.image = UIImage.initWithCache("image://test.png")
+//        print(UIImage(named: "test")?.cache.storeWithKey("image://test.png")) 
+//        imageView.image = UIImage.initWithCache("image://test.png")
         
         
         

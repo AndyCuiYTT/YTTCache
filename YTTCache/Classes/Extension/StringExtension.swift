@@ -13,8 +13,8 @@ public extension String {
         return YTTCacheString(self)
     }
     
-    static func initWithCache(_ key: String,  timeoutIntervalForCache interval: TimeInterval = .greatestFiniteMagnitude) -> String? {
-        return YTTCache.stringForKey(key, timeoutIntervalForCache: interval)
+    static func stringWithCache(_ key: String,  timeoutIntervalForCache interval: TimeInterval = .greatestFiniteMagnitude, result: ((String?) -> Void)?) {
+        YTTCache.stringForKey(key, timeoutIntervalForCache: interval, result: result)
     }
     
     
@@ -30,10 +30,10 @@ public class YTTCacheString {
     
     /// 缓存数据
     ///
-    /// - Parameter key: 键值
-    /// - Returns: 是否缓存成功
-    public func storeWithKey(_ key: String) -> Bool {
-        return YTTCache.storeString(str, key: key)
+    /// - key: 键值
+    /// - result: 是否缓存成功
+    public func storeWithKey(_ key: String, result: ((Bool) -> Void)?) {
+        return YTTCache.storeString(str, key: key, result: result)
     }
     
 }

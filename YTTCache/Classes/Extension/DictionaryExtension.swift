@@ -12,13 +12,15 @@ public extension Dictionary {
         return YTTCacheDictionary<Key>(self)
     }
     
-    static func initWithCache(_ key: String,  timeoutIntervalForCache interval: TimeInterval = .greatestFiniteMagnitude) -> Dictionary<Key, Any>? {
-        if let data = YTTCache.dataForKey(key, timeoutIntervalForCache: interval) {
-            if let dic = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Dictionary<Key, Any> {
-                return dic
+    static func dictionaryWithCache(_ key: String,  timeoutIntervalForCache interval: TimeInterval = .greatestFiniteMagnitude, result: ((Dictionary<Key, Any>?) -> Void)?) {
+        
+        YTTCache.dataForKey(key, timeoutIntervalForCache: interval) { (data) in
+            if let da = data, let dic = try? JSONSerialization.jsonObject(with: da, options: .allowFragments) as? Dictionary<Key, Any> {
+                result?(dic)
+            }else {
+                result?(nil)
             }
         }
-        return nil
     }
     
     
@@ -34,17 +36,17 @@ public class YTTCacheDictionary<T> where T: Hashable {
     
     /// 缓存数据
     ///
-    /// - Parameter key: 键值
-    /// - Returns: 是否缓存成功
-    public func storeWithKey(_ key: String) -> Bool {
+    /// - key: 键值
+    /// - result: 是否缓存成功
+    public func storeWithKey(_ key: String, result: ((Bool) -> Void)?) {
         
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: dictionary, options: [])
-            return YTTCache.storeData(jsonData, key: key)
+            YTTCache.storeData(jsonData, key: key, result: result)
         } catch  {
             YTTLog(error)
+            result?(false)
         }
-        return false
     }
     
 }
