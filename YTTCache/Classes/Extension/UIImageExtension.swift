@@ -8,7 +8,7 @@
 import Foundation
 
 public extension UIImage {
-    public var cache: YTTCacheUIImage {
+    public var ytt: YTTCacheUIImage {
         return YTTCacheUIImage(self)
     }
     

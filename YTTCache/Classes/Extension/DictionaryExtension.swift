@@ -8,7 +8,7 @@
 import Foundation
 
 public extension Dictionary {
-    public var cache: YTTCacheDictionary<Key> {
+    public var ytt: YTTCacheDictionary<Key> {
         return YTTCacheDictionary<Key>(self)
     }
     

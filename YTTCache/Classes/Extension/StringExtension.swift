@@ -9,7 +9,7 @@ import Foundation
 
 
 public extension String {
-    public var cache: YTTCacheString {
+    public var ytt: YTTCacheString {
         return YTTCacheString(self)
     }
     

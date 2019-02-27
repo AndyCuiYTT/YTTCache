@@ -8,7 +8,7 @@
 import Foundation
 
 public extension Array {
-    public var cache: YTTCacheArray<Element> {
+    public var ytt: YTTCacheArray<Element> {
         return YTTCacheArray<Element>(self)
     }
     
